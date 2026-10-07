@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Student Dashboard</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+		<style>
+		    body {
+		        min-height: 100vh;
+		        background: linear-gradient(135deg, #667eea, #764ba2);
+		    }
+		</style>
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-center mb-4">
+            Student Management Dashboard
+        </h2>
+
+        <div class="row g-3">
+
+            <div class="col-md-3">
+                <a href="/students" class="btn btn-primary w-100">
+                    View Students
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="/students/add" class="btn btn-success w-100">
+                    Add Student
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="/reset-password" class="btn btn-warning w-100">
+                    Reset Password
+                </a>
+            </div>
+
+            <div class="col-md-3">
+
+                <form th:action="@{/logout}" method="post">
+
+                    <button type="submit"
+                            class="btn btn-danger w-100">
+                        Logout
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
